@@ -25,7 +25,7 @@ namespace GolfScoreCard
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox1.Text = "Hi";
+            textBox1.Text = "Hole 1";
         }
     }
 }
