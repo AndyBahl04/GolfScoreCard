@@ -21,9 +21,9 @@ namespace GolfScoreCard
                 Holes = new List<Hole>();
             }
 
-            public void AddHole(int number, int par, int yardage)
+            public void AddHole(int number, int par, int yardage, int rating, string image)
             {
-                Holes.Add(new Hole { Number = number, Par = par, Yardage = yardage });
+                Holes.Add(new Hole { Number = number, Par = par, Yardage = yardage, Rating = rating, Image = image });
 
             }
         }
@@ -32,7 +32,8 @@ namespace GolfScoreCard
             public int Number { get; set; }
             public int Par { get; set; }
             public int Yardage { get; set; }
-            // Add more properties as needed
+            public int Rating { get; set; }
+            public string Image { get; set; }
         }
     }
 }

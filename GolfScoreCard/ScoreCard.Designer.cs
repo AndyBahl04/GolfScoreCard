@@ -38,17 +38,29 @@
             this.PlayerName = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Handicap = new System.Windows.Forms.TextBox();
-            this.Par = new System.Windows.Forms.TextBox();
-            this.Yardage = new System.Windows.Forms.TextBox();
-            this.HoleNumber = new System.Windows.Forms.TextBox();
-            this.HoleDifficulty = new System.Windows.Forms.TextBox();
+            this.HoleImage = new System.Windows.Forms.PictureBox();
+            this.Score = new System.Windows.Forms.TextBox();
+            this.HoleNumber = new System.Windows.Forms.Label();
+            this.Par = new System.Windows.Forms.Label();
+            this.Yardage = new System.Windows.Forms.Label();
+            this.HoleDifficulty = new System.Windows.Forms.Label();
+            this.FinalScore = new System.Windows.Forms.Label();
+            this.UpdatedHandicap = new System.Windows.Forms.Label();
+            this.HistoryPlayer = new System.Windows.Forms.Label();
+            this.HistoryScore = new System.Windows.Forms.Label();
+            this.Weather = new System.Windows.Forms.TextBox();
+            this.Temp = new System.Windows.Forms.Label();
+            this.Wind = new System.Windows.Forms.Label();
+            this.EnterScore = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.HoleImage)).BeginInit();
             this.SuspendLayout();
             // 
             // NextHole
             // 
-            this.NextHole.Location = new System.Drawing.Point(945, 564);
+            this.NextHole.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.NextHole.Location = new System.Drawing.Point(923, 558);
             this.NextHole.Name = "NextHole";
-            this.NextHole.Size = new System.Drawing.Size(96, 43);
+            this.NextHole.Size = new System.Drawing.Size(118, 49);
             this.NextHole.TabIndex = 0;
             this.NextHole.Text = "Next Hole";
             this.NextHole.UseVisualStyleBackColor = true;
@@ -96,20 +108,22 @@
             // 
             // GolfCourse
             // 
+            this.GolfCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.GolfCourse.Location = new System.Drawing.Point(438, 12);
             this.GolfCourse.Name = "GolfCourse";
-            this.GolfCourse.Size = new System.Drawing.Size(199, 20);
+            this.GolfCourse.Size = new System.Drawing.Size(199, 26);
             this.GolfCourse.TabIndex = 5;
             this.GolfCourse.Text = "Golf Scorecard App";
             this.GolfCourse.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PlayerName
             // 
-            this.PlayerName.Location = new System.Drawing.Point(169, 12);
+            this.PlayerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.PlayerName.Location = new System.Drawing.Point(161, 12);
             this.PlayerName.Name = "PlayerName";
-            this.PlayerName.Size = new System.Drawing.Size(143, 20);
+            this.PlayerName.Size = new System.Drawing.Size(151, 26);
             this.PlayerName.TabIndex = 6;
-            this.PlayerName.Text = "Enter Your Name Here";
+            this.PlayerName.Text = "Enter Your Name";
             this.PlayerName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // contextMenuStrip1
@@ -119,44 +133,148 @@
             // 
             // Handicap
             // 
+            this.Handicap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.Handicap.Location = new System.Drawing.Point(754, 12);
             this.Handicap.Name = "Handicap";
-            this.Handicap.Size = new System.Drawing.Size(143, 20);
+            this.Handicap.Size = new System.Drawing.Size(143, 24);
             this.Handicap.TabIndex = 8;
-            this.Handicap.Text = "Enter Your Handicap Here";
+            this.Handicap.Text = "Enter Your Handicap";
             this.Handicap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Par
+            // HoleImage
             // 
-            this.Par.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.Par.Location = new System.Drawing.Point(365, 77);
-            this.Par.Name = "Par";
-            this.Par.Size = new System.Drawing.Size(143, 45);
-            this.Par.TabIndex = 9;
+            this.HoleImage.Location = new System.Drawing.Point(416, 128);
+            this.HoleImage.Name = "HoleImage";
+            this.HoleImage.Size = new System.Drawing.Size(234, 380);
+            this.HoleImage.TabIndex = 13;
+            this.HoleImage.TabStop = false;
             // 
-            // Yardage
+            // Score
             // 
-            this.Yardage.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.Yardage.Location = new System.Drawing.Point(563, 77);
-            this.Yardage.Name = "Yardage";
-            this.Yardage.Size = new System.Drawing.Size(143, 45);
-            this.Yardage.TabIndex = 10;
+            this.Score.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.Score.Location = new System.Drawing.Point(416, 562);
+            this.Score.Name = "Score";
+            this.Score.Size = new System.Drawing.Size(234, 45);
+            this.Score.TabIndex = 14;
+            this.Score.Text = "Enter Score";
+            this.Score.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // HoleNumber
             // 
-            this.HoleNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.HoleNumber.Location = new System.Drawing.Point(169, 77);
+            this.HoleNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.HoleNumber.Location = new System.Drawing.Point(156, 77);
             this.HoleNumber.Name = "HoleNumber";
-            this.HoleNumber.Size = new System.Drawing.Size(143, 45);
-            this.HoleNumber.TabIndex = 11;
+            this.HoleNumber.Size = new System.Drawing.Size(156, 45);
+            this.HoleNumber.TabIndex = 17;
+            this.HoleNumber.Text = "HoleNumber";
+            this.HoleNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Par
+            // 
+            this.Par.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.Par.Location = new System.Drawing.Point(362, 77);
+            this.Par.Name = "Par";
+            this.Par.Size = new System.Drawing.Size(146, 45);
+            this.Par.TabIndex = 18;
+            this.Par.Text = "Par";
+            this.Par.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Yardage
+            // 
+            this.Yardage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.Yardage.Location = new System.Drawing.Point(563, 77);
+            this.Yardage.Name = "Yardage";
+            this.Yardage.Size = new System.Drawing.Size(143, 45);
+            this.Yardage.TabIndex = 19;
+            this.Yardage.Text = "Yardage";
+            this.Yardage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HoleDifficulty
             // 
-            this.HoleDifficulty.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.HoleDifficulty.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.HoleDifficulty.Location = new System.Drawing.Point(754, 77);
             this.HoleDifficulty.Name = "HoleDifficulty";
             this.HoleDifficulty.Size = new System.Drawing.Size(143, 45);
-            this.HoleDifficulty.TabIndex = 12;
+            this.HoleDifficulty.TabIndex = 20;
+            this.HoleDifficulty.Text = "HoleDifficulty";
+            this.HoleDifficulty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // FinalScore
+            // 
+            this.FinalScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.FinalScore.Location = new System.Drawing.Point(17, 211);
+            this.FinalScore.Name = "FinalScore";
+            this.FinalScore.Size = new System.Drawing.Size(532, 116);
+            this.FinalScore.TabIndex = 21;
+            this.FinalScore.Text = "FinalScore";
+            this.FinalScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // UpdatedHandicap
+            // 
+            this.UpdatedHandicap.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.UpdatedHandicap.Location = new System.Drawing.Point(560, 211);
+            this.UpdatedHandicap.Name = "UpdatedHandicap";
+            this.UpdatedHandicap.Size = new System.Drawing.Size(481, 116);
+            this.UpdatedHandicap.TabIndex = 22;
+            this.UpdatedHandicap.Text = "UpdatedHandicap";
+            this.UpdatedHandicap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // HistoryPlayer
+            // 
+            this.HistoryPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.HistoryPlayer.Location = new System.Drawing.Point(17, 211);
+            this.HistoryPlayer.Name = "HistoryPlayer";
+            this.HistoryPlayer.Size = new System.Drawing.Size(532, 116);
+            this.HistoryPlayer.TabIndex = 23;
+            this.HistoryPlayer.Text = "HistoryPlayer";
+            this.HistoryPlayer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // HistoryScore
+            // 
+            this.HistoryScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.HistoryScore.Location = new System.Drawing.Point(560, 211);
+            this.HistoryScore.Name = "HistoryScore";
+            this.HistoryScore.Size = new System.Drawing.Size(481, 116);
+            this.HistoryScore.TabIndex = 24;
+            this.HistoryScore.Text = "HistoryScore";
+            this.HistoryScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Weather
+            // 
+            this.Weather.Location = new System.Drawing.Point(3, 601);
+            this.Weather.Name = "Weather";
+            this.Weather.Size = new System.Drawing.Size(100, 20);
+            this.Weather.TabIndex = 25;
+            // 
+            // Temp
+            // 
+            this.Temp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.Temp.Location = new System.Drawing.Point(12, 299);
+            this.Temp.Name = "Temp";
+            this.Temp.Size = new System.Drawing.Size(202, 45);
+            this.Temp.TabIndex = 26;
+            this.Temp.Text = "Temp";
+            this.Temp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Wind
+            // 
+            this.Wind.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.Wind.Location = new System.Drawing.Point(-2, 344);
+            this.Wind.Name = "Wind";
+            this.Wind.Size = new System.Drawing.Size(216, 45);
+            this.Wind.TabIndex = 27;
+            this.Wind.Text = "Wind";
+            this.Wind.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // EnterScore
+            // 
+            this.EnterScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.EnterScore.Location = new System.Drawing.Point(416, 511);
+            this.EnterScore.Name = "EnterScore";
+            this.EnterScore.Size = new System.Drawing.Size(234, 41);
+            this.EnterScore.TabIndex = 28;
+            this.EnterScore.Text = "Enter Score Below";
+            this.EnterScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ScoreCard
             // 
@@ -164,10 +282,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1053, 633);
+            this.Controls.Add(this.EnterScore);
+            this.Controls.Add(this.Wind);
+            this.Controls.Add(this.Temp);
+            this.Controls.Add(this.Weather);
+            this.Controls.Add(this.HistoryScore);
+            this.Controls.Add(this.HistoryPlayer);
+            this.Controls.Add(this.UpdatedHandicap);
+            this.Controls.Add(this.FinalScore);
             this.Controls.Add(this.HoleDifficulty);
-            this.Controls.Add(this.HoleNumber);
             this.Controls.Add(this.Yardage);
             this.Controls.Add(this.Par);
+            this.Controls.Add(this.HoleNumber);
+            this.Controls.Add(this.Score);
+            this.Controls.Add(this.HoleImage);
             this.Controls.Add(this.Handicap);
             this.Controls.Add(this.PlayerName);
             this.Controls.Add(this.GolfCourse);
@@ -177,7 +305,8 @@
             this.Controls.Add(this.OliviaCourse);
             this.Controls.Add(this.NextHole);
             this.Name = "ScoreCard";
-            this.Text = "Form1";
+            this.Text = "ScoreCard";
+            ((System.ComponentModel.ISupportInitialize)(this.HoleImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,10 +323,20 @@
         private System.Windows.Forms.TextBox PlayerName;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox Handicap;
-        private System.Windows.Forms.TextBox Par;
-        private System.Windows.Forms.TextBox Yardage;
-        private System.Windows.Forms.TextBox HoleNumber;
-        private System.Windows.Forms.TextBox HoleDifficulty;
+        private System.Windows.Forms.PictureBox HoleImage;
+        private System.Windows.Forms.TextBox Score;
+        private System.Windows.Forms.Label HoleNumber;
+        private System.Windows.Forms.Label Par;
+        private System.Windows.Forms.Label Yardage;
+        private System.Windows.Forms.Label HoleDifficulty;
+        private System.Windows.Forms.Label FinalScore;
+        private System.Windows.Forms.Label UpdatedHandicap;
+        private System.Windows.Forms.Label HistoryPlayer;
+        private System.Windows.Forms.Label HistoryScore;
+        private System.Windows.Forms.TextBox Weather;
+        private System.Windows.Forms.Label Temp;
+        private System.Windows.Forms.Label Wind;
+        private System.Windows.Forms.Label EnterScore;
     }
 }
 
