@@ -34,7 +34,6 @@
             this.LakesGolfClub = new System.Windows.Forms.Button();
             this.StoneyCreek = new System.Windows.Forms.Button();
             this.BearsDen = new System.Windows.Forms.Button();
-            this.GolfCourse = new System.Windows.Forms.TextBox();
             this.PlayerName = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Handicap = new System.Windows.Forms.TextBox();
@@ -52,6 +51,8 @@
             this.Temp = new System.Windows.Forms.Label();
             this.Wind = new System.Windows.Forms.Label();
             this.EnterScore = new System.Windows.Forms.Label();
+            this.GolfCourse = new System.Windows.Forms.Label();
+            this.exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.HoleImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,16 +106,6 @@
             this.BearsDen.Text = "Bears Den Golf Course";
             this.BearsDen.UseVisualStyleBackColor = true;
             this.BearsDen.Click += new System.EventHandler(this.BearsDen_Click);
-            // 
-            // GolfCourse
-            // 
-            this.GolfCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.GolfCourse.Location = new System.Drawing.Point(438, 12);
-            this.GolfCourse.Name = "GolfCourse";
-            this.GolfCourse.Size = new System.Drawing.Size(199, 26);
-            this.GolfCourse.TabIndex = 5;
-            this.GolfCourse.Text = "Golf Scorecard App";
-            this.GolfCourse.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PlayerName
             // 
@@ -276,12 +267,35 @@
             this.EnterScore.Text = "Enter Score Below";
             this.EnterScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // GolfCourse
+            // 
+            this.GolfCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.GolfCourse.Location = new System.Drawing.Point(440, 9);
+            this.GolfCourse.Name = "GolfCourse";
+            this.GolfCourse.Size = new System.Drawing.Size(199, 47);
+            this.GolfCourse.TabIndex = 29;
+            this.GolfCourse.Text = "Golf Scorecard App";
+            this.GolfCourse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // exit
+            // 
+            this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.exit.Location = new System.Drawing.Point(477, 511);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(119, 53);
+            this.exit.TabIndex = 30;
+            this.exit.Text = "EXIT";
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
             // ScoreCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1053, 633);
+            this.Controls.Add(this.exit);
+            this.Controls.Add(this.GolfCourse);
             this.Controls.Add(this.EnterScore);
             this.Controls.Add(this.Wind);
             this.Controls.Add(this.Temp);
@@ -298,7 +312,6 @@
             this.Controls.Add(this.HoleImage);
             this.Controls.Add(this.Handicap);
             this.Controls.Add(this.PlayerName);
-            this.Controls.Add(this.GolfCourse);
             this.Controls.Add(this.BearsDen);
             this.Controls.Add(this.StoneyCreek);
             this.Controls.Add(this.LakesGolfClub);
@@ -319,7 +332,6 @@
         private System.Windows.Forms.Button LakesGolfClub;
         private System.Windows.Forms.Button StoneyCreek;
         private System.Windows.Forms.Button BearsDen;
-        private System.Windows.Forms.TextBox GolfCourse;
         private System.Windows.Forms.TextBox PlayerName;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox Handicap;
@@ -337,6 +349,8 @@
         private System.Windows.Forms.Label Temp;
         private System.Windows.Forms.Label Wind;
         private System.Windows.Forms.Label EnterScore;
+        private System.Windows.Forms.Label GolfCourse;
+        private System.Windows.Forms.Button exit;
     }
 }
 

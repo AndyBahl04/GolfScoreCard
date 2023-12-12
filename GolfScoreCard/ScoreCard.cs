@@ -49,6 +49,7 @@ namespace GolfScoreCard
             Temp.Visible = false;
             Wind.Visible = false;
             EnterScore.Visible = false;
+            exit.Visible = false;
             #endregion
 
             #region Enter Methods Calls
@@ -142,6 +143,7 @@ namespace GolfScoreCard
                     Temp.Visible = false;
                     Wind.Visible = false;
                     EnterScore.Visible = false;
+                    exit.Visible = true;
                     FinalScore.Text = $"Final Score: {finalScore}";
                     UpdatedHandicap.Text = $"Updated Handicap: {updatedHandicap}";
                     History.PlayerHistory.SaveUserScore(playerName, finalScore);
@@ -336,6 +338,11 @@ namespace GolfScoreCard
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             #endregion 
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
